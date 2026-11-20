@@ -1,0 +1,27 @@
+<!--
+  Mistake 1 (closing </p> deleted): The browser silently closes the first <p> when the second <p> opens, keeping the paragraphs separate in Elements, though missing a closing tag makes the markup non-conforming until caught by a validator.
+  Mistake 2 (<h1> changed to <h1>): Nothing actually breaks here because both tags are <h1>—a great reminder to double-check every character when editing tags.
+  Mistake 3 (<!doctype html> deleted): The browser falls into quirks mode instead of standards mode, which can change default rendering rules and layout metrics.
+  Mistake 4 (<title> moved into <body>): The browser still reads <title> for the tab label, while DevTools Elements shows <title> sitting inside <body> instead of <head>.
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <title>About · Nadev</title>
+    <hl>Nadev</h1>
+    <p>
+      I am Nadev, a student in Sri Lanka learning web fundamentals step by step
+      and practicing daily coding habits.
+    <p>
+      I study Computer Systems Engineering at SLIIT and also take part in the
+      STEM Link AI Software Engineer track.
+    </p>
+    <p>
+      I want to build clean, reliable web applications, helpful AI-powered
+      tools, and practical software projects from scratch.
+    </p>
+  </body>
+</html>
